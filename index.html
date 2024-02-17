@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Web Innovative</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<body>
+		<nav>
+			<a href="index.html"><img src="images/Group 6.png" alt="logo" class="navigation-logo" /></a>
+			<ul>
+				<li><a href="#Accueil">Accueil</a></li>
+				<li><a href="#Compétences">Compétences</a></li>
+				<li><a href="#Services">Services</a></li>
+				<li><a href="#Portfolio">Portfolio</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</nav>
+		<main>
+			<img src="images/Group 21.png" id="Accueil" alt="landing_image" width="100%" style="margin-bottom: 10vw" />
+			<img src="images/Group 25.png" id="Compétences" alt="skills" width="100%" style="margin-bottom: 10vw" />
+			<img src="images/Group 22.png" id="Services" alt="services" width="100%" style="margin-bottom: 10vw" />
+			<div class="portfolio" id="Portfolio" style="margin-bottom: 10vw">
+				<h2>Portfolio</h2>
+				<div class="image-grid">
+					<img class="myImg" src="images/E-Bike Company.jpg" alt="Image 1" />
+					<img class="myImg" src="images/Fashion App.jpg" alt="Image 2" />
+					<img class="myImg" src="images/E-Commerce.jpg" alt="Image 3" />
+					<img class="myImg" src="images/Restaurant.jpg" alt="Image 4" />
+
+					<div id="myModal" class="modal">
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01" />
+					</div>
+				</div>
+				<p>Du concept à la conversion, nos sites web vous offre l'excellence digitale. Ensemble, créons votre empreinte en ligne</p>
+			</div>
+			<div class="footer">
+				<img src="images/Group 26.jpg" id="Contact" alt="Footer" width="100%"/>
+				<div class="footer_overlay">
+					<a href="mailto:webinovate@gmail.com">
+						<img src="images/Mail.png" alt="mail">
+					</a>
+					<a href="https://instagram.com/web_inovate">
+						<img src="images/Instagram.png" alt="instagram">
+					</a>
+					<a href="https://wa.me/+33784999381">
+						<img src="images/Whatsapp.png" alt="Whatsapp">
+					</a>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			var modal = document.getElementById('myModal');
+			var img = document.getElementsByClassName('myImg');
+			var modalImg = document.getElementById('img01');
+			for (let i = 0; i < img.length; i++) {
+				img[i].onclick = function () {
+					modal.style.display = 'block';
+					modalImg.src = this.src;
+				};
+			}
+			var span = document.getElementsByClassName('close')[0];
+			span.onclick = function () {
+				modal.style.display = 'none';
+			};
+		</script>
+	</body>
+</html>
